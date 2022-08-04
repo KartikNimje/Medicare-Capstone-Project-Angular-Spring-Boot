@@ -1,0 +1,27 @@
+<h2> Available Medicines </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Qty.Avail</th>
+            <th>Unit Price</th>
+            <th>Activate</th>
+            <th>Edit</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let medicines of medicines">
+            <td> {{medicines.id}} </td>
+            <td> {{medicines.name}} </td>
+            <td> {{medicines.brand}} </td>
+            <td> {{medicines.quantity}} </td>
+            <td> {{medicines.price}} </td>
+            <td> <mat-slide-toggle></mat-slide-toggle> </td>
+            <td><button (click)="editMedicines(medicines.id)" class="btn btn-primary btn-sm"><mat-icon class="whiteColor">edit</mat-icon></button></td>
+            <td><button (click)="deleteMedicines(medicines.id)" class="btn btn-danger btn-sm" style="margin-right: 10px;"><mat-icon class="redColor">delete</mat-icon></button></td>
+        </tr>
+    </tbody>
+</table>

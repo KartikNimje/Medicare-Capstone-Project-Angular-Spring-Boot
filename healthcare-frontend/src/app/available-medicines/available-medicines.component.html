@@ -1,0 +1,25 @@
+<h2> Available Medicines </h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>description</th>
+            <th>Qty.Avail</th>
+            <th>Unit Price</th>
+            <th>Add to Cart</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let medicines of medicines">
+            <td> {{medicines.id}} </td>
+            <td> {{medicines.name}} </td>
+            <td> {{medicines.brand}} </td>
+            <td> {{medicines.description}} </td>
+            <td> {{medicines.quantity}} </td>
+            <td> {{medicines.price}} </td>
+            <td> <button (click)="viewMedicines(medicines.id)" class="btn btn-info">Buy</button></td>            
+        </tr>
+    </tbody>
+</table>

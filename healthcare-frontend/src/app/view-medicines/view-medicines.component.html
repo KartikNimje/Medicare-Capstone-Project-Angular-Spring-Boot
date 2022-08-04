@@ -1,0 +1,33 @@
+<h3>Item Added To Cart</h3>
+<div>
+    <table class="table table-success table-sm">
+        <thead>
+            <th>Product</th>
+            <th>Seller</th>
+            
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{medicines.name}}</td>
+                <td>{{medicines.seller}}</td>
+                
+                <td>{{medicines.price}}</td>
+                <td><input type="number" value="1" class="mytext" [(ngModel)]="num1" required></td>
+                <td>{{medicines.price*num1}}</td>
+                <td><button class="btn btn-danger"><mat-icon class="redColor">delete</mat-icon></button></td>
+        </tbody>
+    </table>
+</div>
+<div>
+    <div class="container" align="left">
+        <button routerLink="available-medicines" routerLinkActive="active" class="btn btn-warning">Continue Shopping</button>
+    </div>
+    <div class="container" align="right">
+        <a routerLink="order-summary" routerLinkActive="active" class="btn btn-success">Checkout</a>
+    </div>
+</div>
+
